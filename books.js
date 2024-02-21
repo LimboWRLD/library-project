@@ -55,6 +55,7 @@ document.getElementById("form-button").addEventListener("click", function() {
       <h2>Title: "${title}"</h2>
       <p>Author: ${author}</p>
       <p>Page Number: ${pages}</p>
+      <p>Read?</p>
       <label class="switch">
       <input type="checkbox" class="slider-checkbox"  ${read ? 'checked' : ''}>
       <span class="slider round"></span>
