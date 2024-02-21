@@ -1,0 +1,230 @@
+*{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.button-38, #submitBtn {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-38:hover, #submitBtn:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-38:focus, #submitBtn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-38:focus-visible , #submitBtn:focus-visible {
+  box-shadow: none;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #94a3b8;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+main{
+  height: 100%;
+}
+.container{
+  flex: 1;
+}
+#btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  border-radius: 4%;
+  background-color: #f1f5f9;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  margin: 2%;
+  position: relative;
+}
+header{
+  background-color:#cbd5e1;
+  height: 100%;
+  width: auto;
+  display: flex;
+  margin-bottom: 2%;
+  padding-left: 5%;
+}
+main{
+  min-height: calc(100vh - 211px - 58px);
+}
+footer{
+  width: 100%;
+  background-color: #64748b;
+  margin-top: auto;
+  padding-left: 5%;
+}
+.add-book{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+form{
+  background-color:#475569;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  gap:1.5rem;
+  color: #f1f5f9;
+  position: relative;
+  font-size: 0.8rem;
+}
+form input{
+  width: 14dvw;
+}
+form svg, .card svg{
+  height: 5dvh;
+  width: auto;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  cursor: pointer;
+  
+}
+form svg:hover, .card svg:hover{
+  fill: red;
+  transition: 0.3s ease-in-out;
+}
+.inputBox{
+  position: relative;
+}
+.inputBox span{
+  position: absolute;
+  left: 4px;
+  color: #111827;
+  text-transform: uppercase;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.inputBox input:valid~span,
+.inputBox input:focus ~ span{
+    color:#f1f5f9;
+    transform: translateX(5px) translateY(-15px);
+    font-size: 0.8rem;
+    padding: 0 7px;
+    border-left: 1px solid #f1f5f9;
+    border-right: 1px solid #f1f5f9;
+}
+.inputBox input :valid,
+.inputBox input:focus{
+    border: solid 1px #f1f5f9;
+}
+.inputBox:nth-child(2)input:valid~span,
+.inputBox:nth-child(2)input:focus~span{
+    background: #f1f5f9;
+    color:#1e2a3f;
+    border-radius: 2px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap:5px;
+  margin: 2%;
+}
+@media only screen and (max-width: 540px) {
+  form{
+    width:70dvw;
+  }
+  body{
+    overflow: visible
+  };
+}
